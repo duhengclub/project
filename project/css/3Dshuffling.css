@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	text-decoration: none;
+}
+
+#shuffling{
+	width:800px;
+	margin:30px auto;
+}
+
+#picList{
+	height:500px;
+	perspective:800px;
+}
+
+#picList li{
+	width:25px;
+	height: 500px;
+	position: relative;
+	float:left; 
+	transform-style:preserve-3d;
+	transform:translateZ(-250px) rotateX(0deg);
+	perspective-origin:left;
+	
+}
+
+#picList li a{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#picList li a:nth-of-type(1){
+	background:url(../image/5.jpg) no-repeat;
+	transform:translateZ(250px);
+}
+
+#picList li a:nth-of-type(2){
+	background:url(../image/6.jpg) no-repeat;
+	transform-origin:top;
+	transform:translateZ(-250px) rotateX(90deg);
+}
+
+#picList li a:nth-of-type(3){
+	background:url(../image/7.jpg) no-repeat;
+	transform:translateZ(-250px) rotateX(180deg);
+}
+
+#picList li a:nth-of-type(4){
+	background:url(../image/8.jpg) no-repeat;
+	transform-origin:bottom;
+	transform:translateZ(-250px) rotateX(-90deg);
+}
+
+#picList li span{
+	width:500px;
+	height: 500px;
+	background: #333;
+	position: absolute;
+	top: 0;
+}
+
+#picList li span:nth-of-type(1){
+	left: 0;
+	transform-origin:left;
+	transform:translateZ(250px) rotateY(90deg);
+}
+
+#picList li span:nth-of-type(2){
+	right: 0;
+	transform-origin:right;
+	transform:translateZ(250px) rotateY(-90deg);
+}
+
+#shuffling #btns{
+	padding: 50px;
+	height: 30px;
+}
+
+#shuffling #btns li{
+	height:30px;
+	width: 30px;
+	background: #000;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+	display: inline-block;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+#shuffling #btns li.active{
+	background: #f60;
+}
